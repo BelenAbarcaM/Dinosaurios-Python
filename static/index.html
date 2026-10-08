@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- Indica que el documento utiliza el estándar HTML5. -->
+<html lang="es">
+  <head>
+    <!-- Permite mostrar caracteres como tildes y ñ correctamente. -->
+    <meta charset="utf-8">
+    <!-- Adapta la página a pantallas de computadoras y teléfonos. -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Texto que aparece en la pestaña del navegador. -->
+    <title>Centro de adopción de dinosaurios</title>
+    <!-- Carga la hoja que da estilo visual a la página. -->
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <!-- Encabezado fijo con el nombre del sistema. -->
+    <header><h1>Centro de adopción de dinosaurios</h1><p>FastAPI + SQLite · CRUD completo</p></header>
+    <main>
+      <!-- JavaScript agrega aquí los botones de las entidades. -->
+      <nav id="tabs"></nav>
+      <section>
+        <!-- JavaScript actualiza este título al cambiar de pestaña. -->
+        <h2 id="title"></h2>
+        <!-- JavaScript construye aquí el formulario de cada entidad. -->
+        <form id="form"></form>
+        <!-- Muestra mensajes de éxito o error accesibles al usuario. -->
+        <p id="message" role="status"></p>
+        <!-- Tabla donde JavaScript dibuja los datos recibidos desde FastAPI. -->
+        <table><thead id="head"></thead><tbody id="body"></tbody></table>
+      </section>
+    </main>
+    <!-- Carga el comportamiento de la interfaz después de crear el HTML. -->
+    <script src="/static/app.js"></script>
+  </body>
+</html>

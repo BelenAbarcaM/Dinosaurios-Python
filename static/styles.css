@@ -1,0 +1,32 @@
+/* Hace que el ancho incluya borde y relleno para calcular tamaños con facilidad. */
+* { box-sizing: border-box; }
+/* Define fuente, color y fondo generales de toda la página. */
+body { font-family: system-ui, sans-serif; margin: 0; background: #f0f7f1; color: #14281d; }
+/* Da contraste y espacio al encabezado principal. */
+header { background: #14532d; color: white; padding: 2rem max(1rem, calc((100% - 1100px) / 2)); }
+/* Evita un margen extra sobre el título. */
+header h1 { margin: 0; }
+/* Centra el contenido y evita que sea demasiado ancho. */
+main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+/* Organiza las pestañas en una fila que puede pasar a otra línea. */
+nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
+/* Define la apariencia base de todos los botones. */
+button { cursor: pointer; border: 0; border-radius: .4rem; padding: .55rem .8rem; background: #dcfce7; color: #14532d; font-weight: 600; }
+/* Resalta la pestaña seleccionada y el botón principal. */
+button.active, button.primary { background: #16a34a; color: white; }
+/* Distribuye automáticamente los campos del formulario según el espacio disponible. */
+form { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .8rem; padding: 1rem; background: white; border-radius: .5rem; }
+/* Coloca el texto de la etiqueta encima de su campo. */
+label { display: grid; gap: .3rem; font-size: .9rem; }
+/* Hace que los campos de entrada sean cómodos de leer y tocar. */
+input { padding: .55rem; border: 1px solid #86a98f; border-radius: .3rem; }
+/* Da a la tabla todo el ancho disponible y une los bordes de las celdas. */
+table { width: 100%; border-collapse: collapse; background: white; margin-top: 1rem; }
+/* Separa visualmente cada celda de la tabla. */
+th, td { padding: .65rem; text-align: left; border-bottom: 1px solid #d5e8d9; }
+/* Reserva espacio para mensajes y usa rojo para errores. */
+#message { min-height: 1.5rem; color: #b91c1c; }
+/* Mantiene juntos los botones de una fila. */
+.actions { display: flex; gap: .4rem; }
+/* Diferencia visualmente una acción destructiva. */
+.danger { background: #fee2e2; color: #991b1b; }
