@@ -1,4 +1,4 @@
-# 🦖 Centro de adopción de dinosaurios prehistóricos
+# Centro de adopción de dinosaurios prehistóricos
 
 ## Descripción
 Aplicación web para administrar un centro donde las personas pueden adoptar dinosaurios prehistóricos.
