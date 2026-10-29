@@ -15,7 +15,7 @@ button { cursor: pointer; border: 0; border-radius: .4rem; padding: .55rem .8rem
 /* Resalta la pestaña seleccionada y el botón principal. */
 button.active, button.primary { background: #16a34a; color: white; }
 /* Distribuye automáticamente los campos del formulario según el espacio disponible. */
-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .8rem; padding: 1rem; background: white; border-radius: .5rem; }
+form { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .8rem; padding: 1rem; background: white; border-radius: .5rem; }
 /* Coloca el texto de la etiqueta encima de su campo. */
 label { display: grid; gap: .3rem; font-size: .9rem; }
 /* Hace que los campos de entrada sean cómodos de leer y tocar. */
@@ -27,6 +27,33 @@ th, td { padding: .65rem; text-align: left; border-bottom: 1px solid #d5e8d9; }
 /* Reserva espacio para mensajes y usa rojo para errores. */
 #message { min-height: 1.5rem; color: #b91c1c; }
 /* Mantiene juntos los botones de una fila. */
-.actions { display: flex; gap: .4rem; }
+td.actions { white-space: nowrap; }
+td.actions button + button { margin-left: .4rem; }
 /* Diferencia visualmente una acción destructiva. */
 .danger { background: #fee2e2; color: #991b1b; }
+/* Texto que explica para qué sirve la entidad activa. */
+.help { margin: .2rem 0 1rem; color: #3b5a47; }
+/* Guía del orden de registro. */
+.order { background: white; border-radius: .5rem; padding: .7rem 1rem; margin-bottom: 1.2rem; font-size: .9rem; }
+.order summary { cursor: pointer; font-weight: 600; color: #14532d; }
+.order p { margin: .6rem 0 0; line-height: 1.5; }
+/* Las listas desplegables se ven igual que los campos de texto. */
+select { padding: .55rem; border: 1px solid #86a98f; border-radius: .3rem; background: white; font: inherit; width: 100%; }
+input { width: 100%; font: inherit; }
+input[readonly], select:disabled { background: #eef3ef; color: #555; }
+/* Explicación pequeña debajo de cada campo. */
+.hint { color: #4d6b58; font-size: .78rem; line-height: 1.35; }
+/* Asterisco de campo obligatorio. */
+.req { color: #b91c1c; }
+/* Fila inferior del formulario con los botones. */
+.form-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.req-note { font-size: .8rem; color: #4d6b58; margin-left: auto; }
+button:disabled { opacity: .6; cursor: wait; }
+/* Mensaje de éxito en verde (los errores siguen en rojo). */
+#message.ok { color: #15803d; }
+#message { font-weight: 600; }
+/* Texto cuando una tabla no tiene registros. */
+.empty { text-align: center; color: #6b7f72; }
+
+/* Misma altura para campos de texto, fecha y listas. */
+input, select { height: 2.5rem; }

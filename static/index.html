@@ -17,9 +17,19 @@
     <main>
       <!-- JavaScript agrega aquí los botones de las entidades. -->
       <nav id="tabs"></nav>
+      <!-- Guía rápida del orden en que conviene registrar la información. -->
+      <details class="order">
+        <summary>¿En qué orden registro la información?</summary>
+        <p>Algunos datos dependen de otros, así que conviene seguir este orden:
+          <b>1.</b> Personas → <b>2.</b> Adoptantes y Cuidadores → <b>3.</b> Dinosaurios → <b>4.</b> Alimentos y Cuidados →
+          <b>5.</b> Adopciones → <b>6.</b> Adopción-alimento y Adopción-cuidado.
+          Para borrar, hazlo al revés. En los campos que apuntan a otra tabla solo puedes elegir registros que ya existen.</p>
+      </details>
       <section>
         <!-- JavaScript actualiza este título al cambiar de pestaña. -->
         <h2 id="title"></h2>
+        <!-- JavaScript explica aquí para qué sirve la entidad activa. -->
+        <p id="help" class="help"></p>
         <!-- JavaScript construye aquí el formulario de cada entidad. -->
         <form id="form"></form>
         <!-- Muestra mensajes de éxito o error accesibles al usuario. -->
