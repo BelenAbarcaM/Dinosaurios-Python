@@ -1,4 +1,4 @@
-# Centro de adopción de dinosaurios prehistóricos
+# 🦖 Centro de adopción de dinosaurios prehistóricos
 
 ## Descripción
 Aplicación web para administrar un centro donde las personas pueden adoptar dinosaurios prehistóricos.
@@ -54,6 +54,9 @@ La base `dinosaurios.db` se crea sola si no existe; `docs/crear_base_de_datos.sq
 | PUT | `/api/{tabla}/{id}` | Actualizar |
 | DELETE | `/api/{tabla}/{id}` | Eliminar |
 | GET | `/api/adopcion/{id}/detalle` | Adopción con sus alimentos y cuidados |
+| GET / DELETE | `/api/{adopcion_alimento\|adopcion_cuidado}/{id_adopcion}/{id_alimento\|id_cuidado}` | Consultar o borrar UNA relación (estas tablas tienen llave compuesta y no se editan: se borra y se vuelve a crear) |
+
+Los errores de validación y de relaciones (cédula que no existe, clave repetida, registro en uso…) se devuelven con código 4xx y un mensaje en español en `detail`, que la interfaz muestra tal cual.
 
 Tablas: `persona`, `adoptante`, `cuidador`, `alimento`, `cuidado`, `dinosaurio`, `adopcion`, `adopcion_alimento`, `adopcion_cuidado`.
 
